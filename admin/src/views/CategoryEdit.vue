@@ -35,7 +35,7 @@ export default {
       if (this.id){
         res = await this.$http.put(`rest/categories/${this.id}`,this.model)
       } else {
-        res = await this.$http.post('rest/categories/rest/',this.model)
+        res = await this.$http.post('rest/categories',this.model)
       }
       this.$router.push('/categories/list')
       this.$message({
